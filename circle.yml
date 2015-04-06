@@ -1,0 +1,11 @@
+## Tests
+test:
+  override:
+    - grunt
+
+# ## Deployment options
+# deployment:
+#   default:
+#     branch: [master, stage, dev]
+#     commands:
+#       - grunt clean coffee package publish:"$CIRCLE_BRANCH"
