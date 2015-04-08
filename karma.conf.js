@@ -35,7 +35,7 @@ module.exports = function(config) {
 
     // the browsers that should be tested
     browsers: [
-      'Chrome'
+      'Chrome', 'Firefox'
     ],
 
     preprocessors: {
