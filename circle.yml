@@ -1,8 +1,8 @@
 ## Tests
 test:
-  override:
+  pre:
     - grunt build
-  post:
+  override:
     - grunt test
 
 # ## Deployment options

@@ -10,6 +10,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-casperjs');
   grunt.loadNpmTasks('grunt-mocha');
+  grunt.loadNpmTasks('grunt-istanbul');
+  grunt.loadNpmTasks('grunt-karma-coveralls');
 
 
   // in what order should the files be concatenated
@@ -101,7 +103,7 @@ module.exports = function(grunt) {
         singleRun: true,
         coverageReporter: {
           type: 'lcov',
-          dir: 'results/coverage/'
+          dir: 'test/coverage/'
         }
       }
     },
@@ -113,6 +115,16 @@ module.exports = function(grunt) {
         files: {
           'results/casper': 'test/e2e/**/*.js'
         }
+      }
+    },
+
+    coveralls: {
+      options: {
+        debug: true,
+        coverageDir: 'test/coverage/',
+        dryRun: true,
+        force: true, 
+        recursive: true
       }
     },
 

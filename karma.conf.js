@@ -42,13 +42,13 @@ module.exports = function(config) {
       // Source files you want to generate coverage reports for
       // This should not include tests or libraries
       // These files will be instrumented by Istanbul
-      'client/scripts/todo/**/*.js': ['coverage']
+      'client/scripts/todo/**/*.js': 'coverage'
     },
 
     // Configure the reporter
     coverageReporter: {
-      type: 'html',
-      dir: 'results/coverage/'
+      type: 'lcov',
+      dir: 'test/coverage/'
     },
 
     // If browser does not capture in given timeout [ms], kill it
