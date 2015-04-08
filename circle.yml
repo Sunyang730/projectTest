@@ -4,7 +4,8 @@ test:
     - grunt build
   override:
     - grunt test
-
+  post:
+    - grunt coveralls
 # ## Deployment options
 # deployment:
 #   default:
